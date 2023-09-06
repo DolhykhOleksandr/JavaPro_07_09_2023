@@ -19,7 +19,10 @@ target/
 
 # JetBrains IDE
 .idea/
-out/
+ out/
+.git/
+*.iml
+
 
 # Unit test reports
 TEST*.xml
