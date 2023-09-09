@@ -1,4 +1,5 @@
 package ua.hillel.dolhykh.homeworks.homework1;
+
 public class Car {
     public void start() {
         startElectricity();
