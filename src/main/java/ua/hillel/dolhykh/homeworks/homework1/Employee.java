@@ -1,5 +1,6 @@
 package ua.hillel.dolhykh.homeworks.homework1;
 
+
 public class Employee {
     private String fullName;
     private String position;
