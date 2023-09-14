@@ -1,4 +1,4 @@
-package ua.hillel.dolhykh.homeworks.homework3;
+package ua.hillel.dolhykh.homeworks.homework3.variant1;
 
 public class Triangle implements ShapeArea {
     private double h;

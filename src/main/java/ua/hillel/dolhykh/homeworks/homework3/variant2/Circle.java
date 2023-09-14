@@ -1,6 +1,6 @@
-package ua.hillel.dolhykh.homeworks.homework3;
+package ua.hillel.dolhykh.homeworks.homework3.variant2;
 
-public class Circle implements ShapeArea{
+class Circle implements ShapeArea {
     private double radius;
 
     public Circle(double radius) {
@@ -9,6 +9,6 @@ public class Circle implements ShapeArea{
 
     @Override
     public double area() {
-        return radius * radius * Math.PI;
+        return Math.PI * radius * radius;
     }
 }
