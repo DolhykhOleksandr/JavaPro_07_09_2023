@@ -1,4 +1,4 @@
-package ua.hillel.dolhykh.homeworks.homework5;
+package ua.hillel.dolhykh.homeworks.homework5.variant2;
 
 import java.util.Scanner;
 import java.util.Random;
