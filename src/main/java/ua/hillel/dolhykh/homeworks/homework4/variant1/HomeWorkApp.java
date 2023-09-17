@@ -1,109 +1,107 @@
 package ua.hillel.dolhykh.homeworks.homework4.variant1;
 
 public class HomeWorkApp {
-    static void printThreeWords() {
-        System.out.println("Orange\nBanana\nApple");
+    public static void main(String[] args) {
+        printThreeWords("Orange", "Banana", "Apple");
+        checkSumSign();
+        printColor();
+        compareNumbers();
+        System.out.println(compareNumbers2(5, 6));
+        checkNumber(-7);
+        System.out.println(checkIfNegative(-6));
+        printString("Hello", 10);
+        System.out.println("2000 рік високосним " + checkIfLeapYear(2000));
+        System.out.println("2400 рік високосним " + checkIfLeapYear(2400));
+        System.out.println("2100 рік високосним " + checkIfLeapYear(2100));
+        System.out.println("2008 рік високосним " + checkIfLeapYear(2008));
+        System.out.println("1912 рік високосним " + checkIfLeapYear(1912));
+        System.out.println("1999 рік високосним " + checkIfLeapYear(1999));
+        System.out.println("2022 рік високосним " + checkIfLeapYear(2022));
+        System.out.println("2024 рік високосним " + checkIfLeapYear(2024));
     }
 
-    static void checkSumSign() {
-        int a = 1;
-        int b = -4;
-        int c = a + b;
-        if (c >= 0) {
-            System.out.println("Сума позитивна " + c);
-        } else {
-            System.out.println("Сума негативна " + c);
+    public static void printThreeWords(String a, String b, String c){
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+
+    public static void checkSumSign(){
+        int a = 4;
+        int b = -5;
+        int c = a +b;
+        if(c>=0){
+            System.out.println(" Сума позитивна");
         }
-    }
+        else System.out.println("Сума негативна");
+    };
 
-    static void printColor() {
-        int value = 56;
-        if (value <= 0) {
+    public static void printColor(){
+        int value = 100;
+
+        if(value <= 0){
             System.out.println("Червоний");
-        } else if (value >= 1 && value <= 100) {
+        }
+        if (value >= 0 && value <= 100){
             System.out.println("Жовтий");
-        } else if (value >= 100) {
+        }
+        if (value >= 100){
             System.out.println("Зелений");
         }
-
     }
 
-    static void compareNumbers() {
-        int a = 3;
-        int b = 3;
-        if (a >= b) {
-            System.out.println("a>=b");
-        } else {
-            System.out.println("a<b");
+    public static void compareNumbers(){
+        int a = 100;
+        int b = 100;
+        if(a >= b){
+            System.out.println("a >= b");
+        }else{
+            System.out.println("a < b");
         }
     }
 
-
-    static void sixQuestion(int a, int b) {
-        if ((a + b) >= 10 && (a + b) <= 20) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
+    public static boolean compareNumbers2(int a, int b){
+        int c = a + b;
+        if (c >= 10 && c <= 20){
+            return true;
         }
-
-
+        else return false;
     }
 
-    static void sevenQuestion(int a) {
-        if (a >= 0) {
-            System.out.println("Додатнє число");
-        } else {
-            System.out.println("Відємне число");
+    public static void checkNumber(int a){
+        if(a >= 0){
+            System.out.println("Чило додатнє");
+        }else{
+            System.out.println("Чило від’ємне");
         }
     }
 
-    static void eightQuestion(int a) {
-        if (a >= 0) {
-            System.out.println(false);
-        } else {
-            System.out.println(true);
+    public static boolean checkIfNegative(int a){
+        if(a >= 0){
+            return false;
+        }else{
+            return true;
         }
     }
 
-    static void nineQuestion(String a, int b) {
-        for (int c = 0; c < b; c++) {
-            System.out.println(a);
-        }
-    }
-
-    static void tenQuestion(int a) {
-        if (a % 4 == 0) {
-            if (a % 100 != 0 || (a % 100 == 0 && a % 400 == 0))
-            {
-                System.out.println("Рік високосний");
+    public static void printString(String s, int a){
+        if (a > 0){
+            for (int i=0; i <= a; i++) {
+                System.out.println(s);
             }
-            else{
-                System.out.println("Рік не високосний");
-            }
-        }
-        else{
-            System.out.println("Рік не високосний");
-        }
+        }else System.out.println("Не можу надрукувати рядок " + a + "разів");
     }
 
-    public static void main(String[] args) {
-        HomeWorkApp.printThreeWords();
-        System.out.println("----------------------------------");
-        HomeWorkApp.checkSumSign();
-        System.out.println("----------------------------------");
-        HomeWorkApp.printColor();
-        System.out.println("----------------------------------");
-        HomeWorkApp.compareNumbers();
-        System.out.println("----------------------------------");
-        HomeWorkApp.sixQuestion(12, 2);
-        System.out.println("----------------------------------");
-        HomeWorkApp.sevenQuestion(-3);
-        System.out.println("----------------------------------");
-        HomeWorkApp.eightQuestion(3);
-        System.out.println("----------------------------------");
-        HomeWorkApp.nineQuestion("bam", 4);
-        System.out.println("----------------------------------");
-        HomeWorkApp.tenQuestion(2308);
-        System.out.println("----------------------------------");
+    public static boolean checkIfLeapYear(int year){
+        boolean isLeapYear = false;
+        if (year%400 == 0){
+            isLeapYear = true;
+        }else if (year%100 != 0){
+            if(year%4 == 0){
+                isLeapYear = true;
+            }
+        }else isLeapYear = false;
+        return isLeapYear;
     }
+
 }
