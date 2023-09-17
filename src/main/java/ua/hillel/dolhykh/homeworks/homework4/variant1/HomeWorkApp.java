@@ -10,14 +10,14 @@ public class HomeWorkApp {
         checkNumber(-7);
         System.out.println(checkIfNegative(-6));
         printString("Hello", 10);
-        System.out.println("2000 рік високосним " + checkIfLeapYear(2000));
-        System.out.println("2400 рік високосним " + checkIfLeapYear(2400));
-        System.out.println("2100 рік високосним " + checkIfLeapYear(2100));
-        System.out.println("2008 рік високосним " + checkIfLeapYear(2008));
-        System.out.println("1912 рік високосним " + checkIfLeapYear(1912));
-        System.out.println("1999 рік високосним " + checkIfLeapYear(1999));
-        System.out.println("2022 рік високосним " + checkIfLeapYear(2022));
-        System.out.println("2024 рік високосним " + checkIfLeapYear(2024));
+        System.out.println("2000 рік є високосним " + checkIfLeapYear(2000));
+        System.out.println("2400 рік є високосним " + checkIfLeapYear(2400));
+        System.out.println("2100 рік є високосним " + checkIfLeapYear(2100));
+        System.out.println("400 рік є високосним " + checkIfLeapYear(400));
+        System.out.println("4 рік є високосним " + checkIfLeapYear(4));
+        System.out.println("100 рік є високосним " + checkIfLeapYear(100));
+        System.out.println("2022 рік є високосним " + checkIfLeapYear(2022));
+        System.out.println("2024 рік є високосним " + checkIfLeapYear(2024));
     }
 
     public static void printThreeWords(String a, String b, String c){
