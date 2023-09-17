@@ -35,8 +35,6 @@ public class HomeWorkApp {
         } else System.out.println("Сума негативна");
     }
 
-    ;
-
     public static void printColor() {
         int value = 100;
         if (value <= 0) {
@@ -102,5 +100,4 @@ public class HomeWorkApp {
         } else isLeapYear = false;
         return isLeapYear;
     }
-
 }
