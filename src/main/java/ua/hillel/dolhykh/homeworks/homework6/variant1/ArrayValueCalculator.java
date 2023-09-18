@@ -31,5 +31,4 @@ public class ArrayValueCalculator {
         }
         System.out.println("result = " + result);
     }
-
 }
