@@ -6,8 +6,6 @@ import java.util.List;
 
 public class Logger {
     private static final String LOG_FILE_NAME = "log.txt";
-
-    // Метод для запису лог-повідомлення з вказаним префіксом в файл
     public static void log(String level, String message) {
         try (FileWriter writer = new FileWriter(LOG_FILE_NAME, true);
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
@@ -17,8 +15,6 @@ public class Logger {
             e.printStackTrace();
         }
     }
-
-    // Метод для читання всіх лог-повідомлень з файлу
     public static List<String> readLogs() {
         List<String> logs = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(LOG_FILE_NAME))) {
@@ -32,7 +28,6 @@ public class Logger {
         return logs;
     }
 
-    // Метод для виведення лог-повідомлень заданого рівня
     public static void printLogsByLevel(String logLevel) {
         List<String> logs = readLogs();
         for (String log : logs) {
@@ -53,11 +48,9 @@ public class Logger {
             System.out.println(log);
         }
 
-        // Виводимо лог-повідомлення заданого рівня (наприклад, INFO)
         System.out.println("INFO логи:");
         printLogsByLevel("INFO");
 
-        // Виводимо лог-повідомлення заданого рівня (наприклад, DEBUG)
         System.out.println("DEBUG логи:");
         printLogsByLevel("DEBUG");
     }
