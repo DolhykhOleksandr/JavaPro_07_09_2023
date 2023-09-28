@@ -7,9 +7,11 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static java.lang.System.*;
+
 public class FileLogger {
 
-    private FileLoggerConfiguration config;
+    private final FileLoggerConfiguration config;
 
     public FileLogger(FileLoggerConfiguration config) {
         this.config = config;
@@ -30,7 +32,7 @@ public class FileLogger {
             DateFormat time = new SimpleDateFormat("HH:mm:ss");
             fileLog.write("[" + time.format(new Date()) + "][" + loggingLevel + "] Message: " + message + "\n");
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            out.println(e.getMessage());
         }
     }
 
