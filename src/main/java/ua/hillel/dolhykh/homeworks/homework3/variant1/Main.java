@@ -6,7 +6,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<ShapeArea> shapes = new ArrayList<>();
-
         shapes.add(new Circle(2));
         shapes.add(new Triangle(3, 5));
         shapes.add(new Square(4.5));
