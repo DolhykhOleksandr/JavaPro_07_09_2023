@@ -1,10 +1,7 @@
 package ua.hillel.dolhykh.homeworks.homework12.variant1;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 import static ua.hillel.dolhykh.homeworks.homework12.variant1.ProductType.*;
 
@@ -48,6 +45,13 @@ public class MainApp {
         List<Product> bookProducts = products.stream()
                 .filter(product -> BOOK.equals(product.getProductType()))
                 .toList();
+       /* if (bookProducts.isEmpty()) {
+            System.out.println("No BOOK products found.");
+            return Collections.emptyList();
+        }
+        Also we can use this variant and we return an empty list if there are no products
+        or as variant below.
+        */
 
         if (bookProducts.isEmpty()) {
             throw new NoSuchElementException("No BOOK products found.");
