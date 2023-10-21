@@ -11,14 +11,14 @@ public final class ProductReport {
     public static List<Product> getBooksMoreThan250Units(List<Product> products) {
         return products.stream()
                 .filter(product -> product.getType().equals(ProductType.BOOK))
-                .filter(product -> product.getPrice()>250)
+                .filter(product -> product.getPrice() > 250)
                 .toList();
     }
 
     public static List<Product> getBooksWith10PercentDiscount(List<Product> products) {
         return products.stream()
                 .filter(product -> product.getType().equals(ProductType.BOOK) && product.getDiscount())
-                .peek(product -> product.setPrice(product.getPrice()*0.9))
+                .peek(product -> product.setPrice(product.getPrice() * 0.9))
                 .toList();
     }
 
@@ -31,7 +31,7 @@ public final class ProductReport {
 
     public static List<Product> getLastThreeProductsByDate(List<Product> products) {
         return products.stream()
-                .sorted((p1,p2) -> p2.getDate().compareTo(p1.getDate()))
+                .sorted((p1, p2) -> p2.getDate().compareTo(p1.getDate()))
                 .limit(3)
                 .toList();
     }
