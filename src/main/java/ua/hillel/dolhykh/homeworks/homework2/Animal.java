@@ -1,4 +1,4 @@
-package ua.hillel.dolhykh.homeworks.homework2.variant2;
+package ua.hillel.dolhykh.homeworks.homework2;
 
 public class Animal {
 

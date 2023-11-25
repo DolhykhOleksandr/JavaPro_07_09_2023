@@ -1,4 +1,4 @@
-package ua.hillel.dolhykh.homeworks.homework2.variant2;
+package ua.hillel.dolhykh.homeworks.homework2;
 
 public class Dog extends Animal {
     private static final int MAX_RUN_DISTANCE = 500;
